@@ -123,6 +123,7 @@ uint16_t calcular_pulso(uint16_t adc_raw);
 
 
 // ──────────────────────────────────────────────
+
 // FUNÇÃO: ler_adc
 //
 // Seleciona o canal ADC e retorna a leitura de 12 bits.

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Emmanuel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 64.05, "left": -92.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 142, "left": 163.2, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -58.2,
+      "left": 43.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:3V3_EN", "joystick1:VCC", "red", [ "h97.2", "v-9.6" ] ],
+    [ "pico:GND.6", "joystick1:GND", "black", [ "h126" ] ],
+    [ "pico:GND.6", "servo1:GND", "black", [ "h174" ] ],
+    [ "pico:GP19", "servo1:PWM", "green", [ "h0" ] ],
+    [ "servo1:V+", "pico:3V3_EN", "red", [ "h-28.8", "v-105.5" ] ],
+    [ "pico:GP27", "joystick1:HORZ", "green", [ "h97.2", "v0", "h9.6", "v0", "h9.6" ] ],
+    [ "joystick1:VERT", "pico:GP26", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

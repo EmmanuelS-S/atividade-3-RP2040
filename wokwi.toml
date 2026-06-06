@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build\atividade3-PWM-ADC.hex'
+elf = 'build\atividade3-PWM-ADC.elf'
